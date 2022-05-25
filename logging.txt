@@ -1,0 +1,175 @@
+Request method:	POST
+Request URI:	http://100.76.196.70:30909/apilayer/v1/subscriptions
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		countryCode=NO
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "serviceIdentifier": "202205251240251",
+    "imsi": "202205251240252",
+    "subscriptionMode": "Postpaid",
+    "accountInfo": {
+        "customerType": "Business",
+        "lastName": "Dasari",
+        "address": "4th street",
+        "city": "Hyd",
+        "country": "Norway",
+        "bdom": "1",
+        "billingFrequency": "Monthly"
+    },
+    "serviceInfo": {
+        "preferences": {
+            "serviceProviderId": "TS",
+            "tcId": "12345",
+            "brandInfo": "TeliaNO",
+            "language": "Norwish",
+            "channel": "SMS",
+            "emailAddress": "sahithya.dasari@outlook.com",
+            "alternateNumber": "3456789043",
+            "subscriptionType": "1"
+        },
+        "notifications": {
+            "domesticNotifyEnabled": "0",
+            "roamingNotifyEnabled": "0",
+            "rccNotifyEnabled": "1",
+            "barringTopupPurchase": "1"
+        }
+    }
+}
+HTTP/1.1 201 Created
+transfer-encoding: chunked
+orderId: ea89f042-dec9-491f-a715-350ab1270a49-2022-05-25T07:10:14.301Z
+Content-Type: application/hal+json
+Date: Wed, 25 May 2022 07:10:15 GMT
+
+{
+    "code": "000",
+    "status": "201",
+    "message": "Primary subscription created successfully ",
+    "errors": null,
+    "_links": {
+        "AddSubscription": {
+            "href": "http://100.76.196.70:30909/api/v1/subscriptions"
+        },
+        "AddProvision": {
+            "href": "http://100.76.196.70:30909/api/v1/provision"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://100.76.196.70:30909/apilayer/v1/subscriptions/202205251240251/topups
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		countryCode=NO
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "bundleCode": "Topup0008"
+}
+HTTP/1.1 201 Created
+transfer-encoding: chunked
+orderId: 87947ab1-9e84-4818-af06-6e10de9747de-2022-05-25T07:10:15.694Z
+Content-Type: application/hal+json
+Date: Wed, 25 May 2022 07:10:15 GMT
+
+{
+    "code": "000",
+    "status": "201",
+    "message": "Top-up bundle purchased successfully.",
+    "errors": null,
+    "_links": {
+        "Base / Roaming bundle purchase": {
+            "href": "http://100.76.196.70:30909/api/v1/subscriptions/202205251240251/bundles"
+        },
+        "RCC bundle purchase": {
+            "href": "http://100.76.196.70:30909/api/v1/subscriptions/202205251240251/bundles/rcc"
+        },
+        "Top-up bundle purchase": {
+            "href": "http://100.76.196.70:30909/api/v1/subscriptions/202205251240251/topups"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://100.76.196.70:30909/apilayer/v1/subscriptions/202205251240251/topups
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		countryCode=NO
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "bundleCode": "Topup0007"
+}
+HTTP/1.1 201 Created
+transfer-encoding: chunked
+orderId: 9fb0dce7-8b70-4ff2-839c-df1b59774da0-2022-05-25T07:10:17.500Z
+Content-Type: application/hal+json
+Date: Wed, 25 May 2022 07:10:18 GMT
+
+{
+    "code": "000",
+    "status": "201",
+    "message": "Top-up bundle purchased successfully.",
+    "errors": null,
+    "_links": {
+        "Base / Roaming bundle purchase": {
+            "href": "http://100.76.196.70:30909/api/v1/subscriptions/202205251240251/bundles"
+        },
+        "RCC bundle purchase": {
+            "href": "http://100.76.196.70:30909/api/v1/subscriptions/202205251240251/bundles/rcc"
+        },
+        "Top-up bundle purchase": {
+            "href": "http://100.76.196.70:30909/api/v1/subscriptions/202205251240251/topups"
+        }
+    }
+}
+Request method:	POST
+Request URI:	http://100.76.196.70:30909/apilayer/v1/subscriptions/202205251240251/topups
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		countryCode=NO
+				Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "bundleCode": "abcd"
+}
+HTTP/1.1 400 Bad Request
+transfer-encoding: chunked
+orderId: 8cd2f826-c2db-47cf-988f-15f9fc1a96eb-2022-05-25T07:10:18.507Z
+Content-Type: application/hal+json
+Date: Wed, 25 May 2022 07:10:18 GMT
+
+{
+    "code": "ERR1001",
+    "status": "400",
+    "message": "Invalid input provided.",
+    "errors": [
+        {
+            "message": "Invalid bundleCode provided."
+        }
+    ]
+}
