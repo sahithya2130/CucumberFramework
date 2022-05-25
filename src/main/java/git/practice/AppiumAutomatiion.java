@@ -21,4 +21,8 @@ public class AppiumAutomatiion {
 		System.out.println("Linux phones");
 	}
 	
+	public static void LinuxDevices1(){
+		System.out.println("Linux phones");
+	}
+	
 }
